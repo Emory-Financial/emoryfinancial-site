@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emory Financial Insights</title>
+    <link>https://emoryfinancial.com/insights</link>
+    <atom:link href="https://emoryfinancial.com/insights/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Plain-English articles from California mortgage broker Derek Shao on homeownership, home equity, family property and the economy, and what each means for your mortgage.</description>
+    <language>en-us</language>
+    <item>
+      <title>Worried About AI and Your Job? Here&#x27;s What It Means for Your Mortgage</title>
+      <link>https://emoryfinancial.com/insights/ai-job-security-mortgage</link>
+      <guid isPermaLink="true">https://emoryfinancial.com/insights/ai-job-security-mortgage</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 -0700</pubDate>
+      <category>Jobs &amp; income</category>
+      <description>Worried AI could affect your job? A 20-year California mortgage broker explains what to do now to protect your home, your loan options, and your plans.</description>
+    </item>
+    <item>
+      <title>Earned Wage Access and Buying a Home: What Tradespeople and Gig Workers Should Know</title>
+      <link>https://emoryfinancial.com/insights/earned-wage-access-mortgage-trade-workers</link>
+      <guid isPermaLink="true">https://emoryfinancial.com/insights/earned-wage-access-mortgage-trade-workers</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 -0700</pubDate>
+      <category>Self-employed &amp; trades</category>
+      <description>Landscapers, electricians, pool techs and gig workers increasingly use pay-early apps. Here&#x27;s how earned wage access shows up when you apply for a California mortgage.</description>
+    </item>
+    <item>
+      <title>Buy, Remodel, or Tear Down and Rebuild? A California Homeowner&#x27;s Decision Guide</title>
+      <link>https://emoryfinancial.com/insights/buy-vs-remodel-vs-rebuild-california</link>
+      <guid isPermaLink="true">https://emoryfinancial.com/insights/buy-vs-remodel-vs-rebuild-california</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 -0700</pubDate>
+      <category>Buying &amp; remodeling</category>
+      <description>Outgrowing your home? Compare buying, remodeling and rebuilding in California, including property tax, financing options and a checklist to choose your path.</description>
+    </item>
+    <item>
+      <title>Inheriting Your Parents&#x27; California Home: Prop 19, Property Taxes, and Sibling Buyouts</title>
+      <link>https://emoryfinancial.com/insights/prop-19-inherit-parents-home-california</link>
+      <guid isPermaLink="true">https://emoryfinancial.com/insights/prop-19-inherit-parents-home-california</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 -0700</pubDate>
+      <category>Family &amp; estate</category>
+      <description>Plan to keep your parents&#x27; California home? How Prop 19&#x27;s $1,044,586 exclusion works, what it means for property tax, and how to finance a sibling buyout.</description>
+    </item>
+    <item>
+      <title>Should You Pay Off Your Mortgage Early or Invest the Difference?</title>
+      <link>https://emoryfinancial.com/insights/pay-off-mortgage-early-or-invest</link>
+      <guid isPermaLink="true">https://emoryfinancial.com/insights/pay-off-mortgage-early-or-invest</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 -0700</pubDate>
+      <category>Planning</category>
+      <description>Extra mortgage payments vs. investing: a California mortgage broker runs the numbers for 3% and 6.75% loans and shows how to decide what fits your family.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,231 @@
+# Emory Financial — Netlify configuration
+# Static site: no build step required.
+
+[build]
+  publish = "site"
+  command = ""
+
+# Clean URLs: /loans instead of /loans.html
+[[redirects]]
+  from = "/loans.html"
+  to = "/loans"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calculators.html"
+  to = "/calculators"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/partners.html"
+  to = "/partners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/san-gabriel-valley.html"
+  to = "/areas/san-gabriel-valley"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/arcadia.html"
+  to = "/areas/arcadia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/pasadena.html"
+  to = "/areas/pasadena"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/orange-county.html"
+  to = "/areas/orange-county"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/los-angeles.html"
+  to = "/areas/los-angeles"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/inland-empire.html"
+  to = "/areas/inland-empire"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/areas/index.html"
+  to = "/areas"
+  status = 301
+  force = true
+
+# The thank-you page is a directory index (thanks/index.html), which resolves
+# reliably without depending on implicit .html handling. This just catches
+# anyone arriving at the old path.
+[[redirects]]
+  from = "/thanks.html"
+  to = "/thanks/"
+  status = 301
+
+# ---- Per-originator vanity subdomains ----
+# Add each as a domain alias in Netlify first (Domain management -> Add domain alias),
+# then these rules point them at the right profile page. This gives each originator a
+# memorable URL for business cards while keeping all SEO authority on the main domain.
+[[redirects]]
+  from = "https://jon.emoryfinancial.com/*"
+  to = "https://emoryfinancial.com/team/jon-lam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://derek.emoryfinancial.com/*"
+  to = "https://emoryfinancial.com/team/derek-shao"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/team.html"
+  to = "/team"
+  status = 301
+  force = true
+
+# Legacy WordPress paths from emoryfinancial.com -> new equivalents
+[[redirects]]
+  from = "/about-us"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/mortgage-calculator"
+  to = "/calculators"
+  status = 301
+
+[[redirects]]
+  from = "/the-mortgage-process"
+  to = "/#main"
+  status = 301
+
+[[redirects]]
+  from = "/home-mortgage"
+  to = "/loans#purchase"
+  status = 301
+
+[[redirects]]
+  from = "/refinance-mortgage"
+  to = "/loans#refinance"
+  status = 301
+
+[[redirects]]
+  from = "/cash-out-refinance"
+  to = "/loans#cashout"
+  status = 301
+
+[[redirects]]
+  from = "/success-stories"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/terms-of-use"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+
+# ---- Insights (articles) ----
+[[redirects]]
+  from = "/insights/index.html"
+  to = "/insights"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/*.html"
+  to = "/insights/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/insights"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/insights"
+  status = 301
+
+[[headers]]
+  for = "/insights/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+# The deploy check must never be cached or it lies about which build is live.
+[[headers]]
+  for = "/version.txt"
+  [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Images are stable and get renamed when they change, so they can cache.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Stylesheet and scripts keep the same filenames across deploys, so they must
+# revalidate. Caching them immutably means visitors keep old code after an update.
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
