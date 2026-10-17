@@ -173,8 +173,8 @@
   force = true
 
 [[redirects]]
-  from = "/insights/*.html"
-  to = "/insights/:splat"
+  from = "/insights/page/1"
+  to = "/insights"
   status = 301
   force = true
 
@@ -192,6 +192,11 @@
   for = "/insights/feed.xml"
   [headers.values]
     Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/insights/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "/llms.txt"

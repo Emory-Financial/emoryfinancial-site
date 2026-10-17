@@ -41,12 +41,14 @@ For self-employed borrowers whose tax returns understate real income, **bank-sta
 
 ## A 90-day plan if you want to buy or refinance
 
-1. **Pull three months of statements** and look at them the way an underwriter would.
-2. **Taper EWA use.** Build a small buffer, even one week of expenses, so you can stop drawing early.
-3. **Separate business and personal accounts** if you're self-employed.
-4. **Deposit income the same way every time.** Cash jobs that never hit the bank can't count.
-5. **Keep receipts** for any large deposit that isn't payroll, such as a tax refund, a tool sale or a family gift.
-6. **Talk to your tax preparer before filing.** One more year of lower write-offs can raise your buying power meaningfully.
+```chart
+{"type": "steps", "title": "Your 90-day plan before you apply",
+ "steps": [
+  {"when": "Days 1–30", "title": "Read your statements like an underwriter", "items": ["Pull three months of bank statements", "Mark every EWA advance, repayment and fee"]},
+  {"when": "Days 31–60", "title": "Clean up the cash flow", "items": ["Taper EWA use; build even a one-week buffer", "Separate business and personal accounts if you're self-employed", "Deposit income the same way every time; cash that never hits the bank can't count"]},
+  {"when": "Days 61–90", "title": "Document everything", "items": ["Keep receipts for any large non-payroll deposit (tax refund, tool sale, family gift)", "Talk to your tax preparer before filing; one more year of lower write-offs can raise your buying power"]}
+ ]}
+```
 
 ## For employers in the trades
 

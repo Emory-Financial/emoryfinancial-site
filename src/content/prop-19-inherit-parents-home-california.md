@@ -25,6 +25,14 @@ An example from the San Gabriel Valley, using a 1.25% effective tax rate (typica
 | Child moves in, Prop 19 applies ($1.8M market value − $1,044,586) | $755,414 | $9,443 |
 | Child doesn't move in (full reassessment) | $1,800,000 | $22,500 |
 
+```chart
+{"type": "bars", "title": "Annual property tax on a $1.8 million inherited home", "format": "usd",
+ "categories": ["Parents today", "Child moves in (Prop 19)", "No one moves in"],
+ "series": [{"name": "Approximate annual tax", "values": [3750, 9443, 22500]}],
+ "caption": "Example: parents' taxed value $300,000; 1.25% effective tax rate.",
+ "source": "Emory Financial calculation; exclusion amount ($1,044,586) from the California State Board of Equalization."}
+```
+
 Moving in saves roughly $13,000 a year in this example, even though the tax still rises. Your county assessor makes the actual determination.
 
 ## What are the deadlines?

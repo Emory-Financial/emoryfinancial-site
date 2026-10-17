@@ -1,0 +1,2 @@
+{ "name": "emory-site-tools", "private": true,
+  "dependencies": { "@fontsource/space-grotesk": "5.1.1", "@fontsource/ibm-plex-sans": "5.1.1", "@fontsource/ibm-plex-mono": "5.1.1" } }

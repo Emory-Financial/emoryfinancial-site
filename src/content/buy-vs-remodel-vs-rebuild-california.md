@@ -20,6 +20,16 @@ order: 3
 | Cost certainty | High: price known at contract | Medium: surprises behind walls | Lowest: bids, permits and change orders |
 | Selling costs | Roughly 5–7% of the sale price | None | None |
 
+```chart
+{"type": "ranges", "title": "How long each path usually takes", "max": 36, "tick": 6, "unit": "months",
+ "rows": [
+  {"label": "Buy", "from": 2, "to": 4, "text": "2–4 months"},
+  {"label": "Remodel", "from": 3, "to": 12, "text": "3–12 months"},
+  {"label": "Rebuild", "from": 18, "to": 36, "text": "18–36 months"}
+ ],
+ "caption": "Typical ranges; a rebuild includes design and permits. Your project may differ."}
+```
+
 The property-tax row is where California differs most. Under Prop 13, assessors add value only for the new construction, while the land and untouched structure keep their indexed base ([Sacramento County Assessor](https://assessor.saccounty.gov/TopicsAtoZ/Pages/NewConstruction.aspx); [Santa Cruz County Assessor](https://assessor.santacruzcountyca.gov/PropertyTaxInformation/NewConstruction.aspx)). Owners who bought decades ago often save thousands a year by staying.
 
 ## Option 1: Buy a different home

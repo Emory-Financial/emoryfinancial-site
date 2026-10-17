@@ -20,6 +20,16 @@ Here is the same $500,000 balance with 25 years left, at two different rates, wi
 
 *Illustrative calculation using standard amortization: $500,000 balance, 300 months remaining, extra $500 applied to principal each month. Excludes taxes, insurance and any mortgage insurance.*
 
+```chart
+{"type": "bars", "title": "Total interest left to pay on a $500,000 balance, 25 years remaining", "format": "usdk",
+ "categories": ["3.00% loan", "6.75% loan"],
+ "series": [
+  {"name": "Regular payments", "values": [211317, 536367]},
+  {"name": "Plus $500 a month to principal", "values": [157261, 375649]}
+ ],
+ "caption": "Rounded to the nearest thousand; exact figures are in the table above.", "source": "Emory Financial calculation using standard amortization."}
+```
+
 The extra dollars are the same. The payoff is three times larger at the higher rate because each dollar of principal you retire stops costing you 6.75% instead of 3%.
 
 ## When paying extra makes sense

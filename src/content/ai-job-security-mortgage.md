@@ -23,6 +23,19 @@ It doesn't, directly. Your rate, payment, and terms are locked in by your note. 
 - **Home equity lines** require the same. Banks often freeze or lower HELOC limits in downturns, but a line that's already open is far easier to keep than a new one is to get.
 - **Buying the next home** gets harder during a job change. Most lenders want a stable two-year history, and a new field or a new 1099 arrangement can mean waiting.
 
+```chart
+{"type": "matrix", "title": "What's open to you, before and after a job loss",
+ "columns": ["While you're employed", "Between jobs"],
+ "rows": [
+  {"label": "Refinance", "cells": ["yes", "no:Needs current pay stubs"]},
+  {"label": "Open a new HELOC", "cells": ["yes", "no:Needs verifiable income"]},
+  {"label": "Draw on a HELOC you already have", "cells": ["yes", "Usually, unless the bank freezes or lowers the line"]},
+  {"label": "Buy your next home", "cells": ["yes", "no:Generally needs a new job and offer letter"]},
+  {"label": "Forbearance from your servicer", "cells": ["Only with a hardship", "yes:Call before you miss a payment"]}
+ ],
+ "caption": "General guidance. Lender and servicer rules vary."}
+```
+
 ## What should I do now, while my income is steady?
 
 1. **Know your cushion.** Aim for six months of total housing cost (mortgage, taxes, insurance, HOA) in savings. In Los Angeles County that's often $30,000 to $50,000.
