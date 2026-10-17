@@ -54,7 +54,7 @@ Yes, mostly behind the scenes. Automated underwriting has existed for decades; A
 
 ## Derek's take
 
-In 20 years, I've closed loans through the dot-com bust, 2008, and the pandemic. The people who came through best weren't the ones who guessed the economy right. They were the ones who arranged their options while things were calm. If you'd like a 15-minute review of where you stand, no credit pull, I'm happy to do it.
+In 20 years, I've closed loans through the dot-com bust, 2008, and the pandemic. The people who came through best weren't the ones who guessed the economy right. They were the ones who arranged their options while things were calm. If you'd like a 30-minute review of where you stand, no credit pull, I'm happy to do it.
 
 ## FAQ
 

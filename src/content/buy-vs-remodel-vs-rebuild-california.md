@@ -93,7 +93,7 @@ Count your "yes" answers in each group.
 
 ## Derek's take
 
-The most expensive mistake I see is choosing the path first and the financing second. A 15-minute call before you hire an architect or a listing agent can save you a year. I'll run all three scenarios side by side with your actual numbers.
+The most expensive mistake I see is choosing the path first and the financing second. A 30-minute call before you hire an architect or a listing agent can save you a year. I'll run all three scenarios side by side with your actual numbers.
 
 ## FAQ
 
