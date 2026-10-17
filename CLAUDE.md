@@ -17,6 +17,10 @@ Static site for Derek Shao's mortgage brokerage. Netlify deploys every push to `
 - No rate quotes, APRs or payment examples that would read as an offer of credit (Regulation Z trigger terms).
   National averages must be labeled as such with source and date; hypothetical examples must say so.
 - Never include client names, loan data, or anything from the borrower spreadsheet.
+- Consultations are always 30 minutes ("Thirty minutes, no credit pull, no obligation"). Never write 15 minutes.
+- Be timely: time-sensitive figures (rates, limits, results) carry an "as of" date and source and are re-checked on
+  publish day. Elections and ballot measures are covered neutrally (what it does for owners/buyers/renters, both sides,
+  official sources); never recommend a vote or endorse a candidate.
 
 ## Article format (src/content/<url-slug>.md)
 Front matter: `title`, `seo_title` (<60 chars), `description` (<155 chars), `card` (one-line teaser for cards),
