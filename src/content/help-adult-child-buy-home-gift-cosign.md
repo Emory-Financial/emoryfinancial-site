@@ -66,7 +66,7 @@ If you're selling a home to your child, you can credit part of your equity towar
 
 ## Derek's take
 
-I've watched parents help three kids into three homes and stay financially comfortable, and I've watched one co-signature block a parent's own refinance for years. The difference was a 15-minute conversation before anyone signed. Call me with both your situation and your child's, and I'll show you which route gets them the house with the least cost to you.
+I've watched parents help three kids into three homes and stay financially comfortable, and I've watched one co-signature block a parent's own refinance for years. The difference was a 30-minute conversation before anyone signed. Call me with both your situation and your child's, and I'll show you which route gets them the house with the least cost to you.
 
 ## FAQ
 
