@@ -152,3 +152,4 @@
   .prose table.matrix th, .prose table.matrix td { padding: .55rem .5rem; }
   .mx { width: 1.2rem; height: 1.2rem; margin-right: .2rem; }
 }
+.prose .mx-text { font-size: var(--t-sm); color: var(--ink-2); }

@@ -9,7 +9,8 @@ An article includes a visual with a fenced block:
 Types:
   bars    vertical bars, one or more series      categories, series[{name, values}], format
   ranges  horizontal low-high bars (timelines)   rows[{label, from, to, text}], max, unit
-  matrix  options x situations, yes / no / note  columns[], rows[{label, cells[]}]
+  matrix  options x situations                   columns[], rows[{label, cells[]}]
+          cell: "yes", "no", "yes:note", "no:note", "=plain text", anything else = "it depends"
   steps   a numbered plan in stages              steps[{when, title, items[]}]
 
 Every figure takes "title", "caption" (optional) and "source" (optional).
@@ -118,7 +119,9 @@ def matrix(spec):
         cells = []
         for c in r["cells"]:
             key, _, note = c.partition(":")
-            if key in icon:
+            if c.startswith("="):
+                txt = f'<span class="mx-text">{E(c[1:])}</span>'
+            elif key in icon:
                 mark, word = icon[key]
                 txt = f'{mark}<span class="mx-word">{word}</span>' + (f' <span class="mx-note">{E(note)}</span>' if note else "")
             else:
