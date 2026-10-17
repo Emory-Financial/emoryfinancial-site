@@ -1097,4 +1097,6 @@ a.region::after { content: " →"; font-family: var(--f-mono); font-size: .7rem;
 
 @media (max-width: 760px) {
   .book-panel { right: auto; left: 0; min-width: min(320px, calc(100vw - 3rem)); }
+  /* a closed panel must not widen the page (sideways scroll on phones) */
+  .book-panel:not(.is-open) { display: none; }
 }
