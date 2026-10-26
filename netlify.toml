@@ -4,6 +4,9 @@
 [build]
   publish = "site"
   command = ""
+  # Only deploy when the built website changes. Commits that touch only src/, docs or
+  # instructions are skipped, so they don't use a production deploy (15 Netlify credits each).
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- site/ netlify.toml"
 
 # Clean URLs: /loans instead of /loans.html
 [[redirects]]
