@@ -1,7 +1,7 @@
 ---
 title: Buy, Remodel, or Tear Down and Rebuild? A California Homeowner's Decision Guide
-seo_title: Buy vs. Remodel vs. Rebuild in California: Costs, Taxes, Loans
-description: Outgrowing your home? Compare buying, remodeling and rebuilding in California, including property tax, financing options and a checklist to choose your path.
+seo_title: Buy, Remodel or Rebuild in California: Costs, Taxes, Loans
+description: Outgrowing your home? Compare buying, remodeling and rebuilding in California: property tax, financing options and a checklist to pick your path.
 card: Three ways to get the home you need, compared on timeline, Prop 13 taxes and financing, with a checklist to pick yours.
 topic: Buying & remodeling
 published: 2026-10-16

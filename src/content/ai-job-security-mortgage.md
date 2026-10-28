@@ -1,6 +1,6 @@
 ---
 title: Worried About AI and Your Job? Here's What It Means for Your Mortgage
-seo_title: AI Job Worries and Your Mortgage: A California Broker's Guide
+seo_title: AI Job Worries and Your Mortgage: A California Guide
 description: Worried AI could affect your job? A 20-year California mortgage broker explains what to do now to protect your home, your loan options, and your plans.
 card: AI is changing hiring faster than it's cutting jobs. What that means for your mortgage, your HELOC and your next move.
 topic: Jobs & income

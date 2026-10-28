@@ -1,7 +1,7 @@
 ---
 title: Building an ADU in California: For Family or Rental Income, and How to Pay for It
 seo_title: California ADU Guide: Rules, Rental Income and Financing
-description: Thinking about an ADU for your parents, your adult kids or rental income? California's 2026 ADU rules, how lenders count ADU rent, and the ways to finance one.
+description: An ADU for your parents, adult kids or rental income? California's 2026 ADU rules, how lenders count ADU rent, and the ways to finance one.
 card: What California now allows on a single-family lot, how lenders count ADU rent, and four ways to pay for the build.
 topic: Buying & remodeling
 published: 2026-10-16

@@ -1,6 +1,6 @@
 ---
 title: Should You Pay Off Your Mortgage Early or Invest the Difference?
-seo_title: Pay Off Your Mortgage Early or Invest? A Broker Runs the Math
+seo_title: Pay Off Your Mortgage Early or Invest? A Broker's Math
 description: Extra mortgage payments vs. investing: a California mortgage broker runs the numbers for 3% and 6.75% loans and shows how to decide what fits your family.
 card: What an extra $500 a month really does at 3% vs. 6.75%, and the order of operations most families should follow.
 topic: Planning

@@ -56,7 +56,11 @@ def parse(path):
     meta = {}
     for line in m.group(1).splitlines():
         k, v = line.split(":", 1)
-        meta[k.strip()] = v.strip()
+        v = v.strip()
+        # YAML-style quoting ("Title: subtitle") is allowed; the quotes are not part of the value.
+        if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+            v = v[1:-1]
+        meta[k.strip()] = v
     meta["slug"] = path.stem
     meta["body_md"] = m.group(2)
     meta["order"] = int(meta.get("order", 99))
@@ -196,6 +200,7 @@ def page(title, description, canonical, og_type, ld_blocks, main, extra_head="",
 <meta name="build" content="{BUILD_ID}">
 <title>{E(title)}</title>
 <meta name="description" content="{E(description)}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:url" content="{canonical}">
@@ -205,6 +210,7 @@ def page(title, description, canonical, og_type, ld_blocks, main, extra_head="",
 <meta property="og:image" content="{og_image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{E(title)}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Emory Financial Insights" href="{SITE}/insights/feed.xml">
 {extra_head}{head_common}
@@ -245,6 +251,9 @@ AUTHOR_BOX = """      <aside class="author-box" aria-label="About the author">
       </aside>"""
 
 org_ref = {"@id": f"{SITE}/#organization"}
+# Search engines don't follow @id across pages, so articles name the publisher in full.
+publisher = {"@type": "Organization", "@id": f"{SITE}/#organization", "name": "Emory Financial",
+             "url": f"{SITE}/", "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/img/logo-mark.svg"}}
 author = {"@type": "Person", "@id": f"{SITE}/team/derek-shao#person", "name": "Derek Shao",
           "url": f"{SITE}/team/derek-shao", "jobTitle": "Founder & Broker of Record",
           "identifier": "NMLS 242117 | CA DRE 01358261",
@@ -276,13 +285,16 @@ for a in articles:
     same = [o for o in articles if o is not a and o["topic"] == a["topic"]]
     others = (same + [o for o in articles if o is not a and o not in same])[:3]
     cover = f"{SITE}/insights/img/{a['slug']}.jpg"
+    modified = a.get("updated", a["published"])
+    updated_note = (f' &middot; Updated <time datetime="{modified}">{nice_date(modified)}</time>'
+                    if modified != a["published"] else "")
     search_index.append({"t": a["title"], "u": f"/insights/{a['slug']}", "c": a["card"], "p": a["topic"],
                          "s": a["topic_slug"], "d": a["published"], "x": plain[:4000]})
     ld = [
         {"@context": "https://schema.org", "@type": "BlogPosting", "headline": a["title"],
          "description": a["description"], "url": url, "mainEntityOfPage": url,
          "datePublished": a["published"], "dateModified": a.get("updated", a["published"]),
-         "author": author, "publisher": org_ref, "image": cover,
+         "author": author, "publisher": publisher, "image": cover,
          "inLanguage": "en-US", "articleSection": a["topic"],
          "isPartOf": {"@type": "Blog", "@id": f"{SITE}/insights#blog", "name": "Emory Financial Insights"}},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -300,7 +312,7 @@ for a in articles:
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/insights">Insights</a> <span aria-hidden="true">/</span> <a href="/insights/topic/{a['topic_slug']}">{E(a['topic'])}</a></nav>
       <h1>{E(a['title'])}</h1>
-      <p class="byline">By <a href="/team/derek-shao">Derek Shao</a>, NMLS 242117 &middot; <time datetime="{a['published']}">{nice_date(a['published'])}</time> &middot; {minutes} min read</p>
+      <p class="byline">By <a href="/team/derek-shao">Derek Shao</a>, NMLS 242117 &middot; <time datetime="{a['published']}">{nice_date(a['published'])}</time>{updated_note} &middot; {minutes} min read</p>
     </div>
   </section>
 
@@ -328,10 +340,12 @@ for a in articles:
 {CTA}
 """
     extra = (f'<meta property="article:published_time" content="{a["published"]}">\n'
+             f'<meta property="article:modified_time" content="{modified}">\n'
              f'<meta property="article:section" content="{E(a["topic"])}">\n'
              f'<meta property="article:author" content="Derek Shao">\n')
     (ins_dir / f"{a['slug']}.html").write_text(
-        page(f"{a['seo_title']} | Emory Financial", a["description"], url, "article", ld, main, extra, cover),
+        # Keep the brand suffix only when the whole title still fits in a results page (~60 chars).
+        page(f"{a['seo_title']} | Emory Financial" if len(a["seo_title"]) <= 42 else a["seo_title"], a["description"], url, "article", ld, main, extra, cover),
         encoding="utf-8")
 
 (ins_dir / "search.json").write_text(json.dumps(search_index, ensure_ascii=False, separators=(",", ":")),

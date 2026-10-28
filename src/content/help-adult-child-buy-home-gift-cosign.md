@@ -1,6 +1,6 @@
 ---
 title: Helping Your Adult Child Buy a Home: Gift, Co-Sign, or Co-Borrow?
-seo_title: Helping Your Child Buy a Home: Gift vs. Co-Sign vs. Co-Borrow
+seo_title: Helping Your Child Buy a Home: Gift, Co-Sign or Co-Borrow?
 description: Want to help your son or daughter buy in California? Compare a gift, co-signing and co-borrowing, with 2026 gift tax limits and what lenders require.
 card: Three ways parents help with a first home, and what each one does to your taxes, your credit and your own borrowing.
 topic: Family & estate

@@ -1,7 +1,7 @@
 ---
 title: Self-Employed and Planning to Buy? Start With Next Year's Tax Return
-seo_title: Self-Employed Mortgage Tips: Tax Returns to File Before You Buy
-description: Write-offs that save you tax can shrink your mortgage. How lenders read self-employed tax returns, which deductions they add back, and a 12-month plan before you buy.
+seo_title: Self-Employed? Tax Returns to File Before You Buy a Home
+description: Write-offs that save you tax can shrink your mortgage. How lenders read self-employed returns, which deductions they add back, and a 12-month plan.
 card: The deductions lenders add back, the ones they don't, and a 12-month plan for business owners who want to buy.
 topic: Self-employed & trades
 published: 2026-10-16

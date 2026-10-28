@@ -1,7 +1,7 @@
 ---
 title: Earned Wage Access and Buying a Home: What Tradespeople and Gig Workers Should Know
-seo_title: Earned Wage Access & Mortgages for Trade and Gig Workers in CA
-description: Landscapers, electricians, pool techs and gig workers increasingly use pay-early apps. Here's how earned wage access shows up when you apply for a California mortgage.
+seo_title: Earned Wage Access and Mortgages: CA Trade and Gig Workers
+description: Electricians, landscapers, pool techs and gig workers use pay-early apps. How earned wage access shows up when you apply for a California mortgage.
 card: Pay-early apps are everywhere in the trades. Here's how they show up when an underwriter reads your bank statements.
 topic: Self-employed & trades
 published: 2026-10-16
