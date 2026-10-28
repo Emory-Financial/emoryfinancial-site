@@ -19,7 +19,11 @@ import shutil
 import sys
 from pathlib import Path
 
-import markdown
+try:
+    import markdown
+except ImportError:  # no network needed: fall back to the copy committed in src/tools/vendor
+    sys.path.insert(0, str(next((Path(__file__).parent / "tools" / "vendor").glob("markdown-*.whl"))))
+    import markdown
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import charts  # noqa: E402

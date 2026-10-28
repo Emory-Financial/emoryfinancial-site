@@ -7,7 +7,6 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 python3 src/build.py src/original src/content site --manifest-only
-if [ ! -d src/tools/node_modules/@fontsource ]; then (cd src/tools && npm install --silent); fi
 NODE_PATH="$(npm root -g)" node src/tools/covers.js src/covers-manifest.json src/covers
 python3 src/build.py src/original src/content site
 sed 's/^  publish = "\."/  publish = "site"/' site/netlify.toml > netlify.toml

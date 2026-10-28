@@ -8,8 +8,9 @@ const { chromium } = require('playwright');
 
 const [, , manifestPath, outDir] = process.argv;
 const items = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-const fontDir = path.join(__dirname, 'node_modules', '@fontsource');
-const font = (pkg, file) => 'data:font/woff2;base64,' + fs.readFileSync(path.join(fontDir, pkg, 'files', file)).toString('base64');
+// The three cover fonts are committed in fonts/ (SIL OFL) so a build never needs npm.
+const fontDir = path.join(__dirname, 'fonts');
+const font = (pkg, file) => 'data:font/woff2;base64,' + fs.readFileSync(path.join(fontDir, file)).toString('base64');
 
 // Simple gold line-art motif per topic (drawn in a 420x420 box).
 const MOTIFS = {
