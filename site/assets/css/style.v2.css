@@ -1101,6 +1101,10 @@ a.region::after { content: " →"; font-family: var(--f-mono); font-size: .7rem;
   .book-panel:not(.is-open) { display: none; }
 }
 
+/* beehiiv embedded subscribe form (one-step signup, styled in beehiiv to match) */
+.newsletter-embed { margin-top: var(--sp-4); min-height: 52px; }
+.newsletter-embed iframe { width: 100% !important; max-width: 100%; }
+
 
 /* ---------- Insights (articles) ---------- */
 .article-head .crumbs {

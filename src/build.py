@@ -166,16 +166,15 @@ NEWSLETTER = """  <section class="section">
         <div class="split" style="align-items:center">
           <div>
             <p class="eyebrow" style="color:#EFD9AF">The Rate Note</p>
-            <h2>Get these articles once a month.</h2>
-            <p class="mt-3">One email a month from Derek: the new Insights articles, where California rates actually are, and anything that changed in lending. No spam, unsubscribe in one click.</p>
+            <h2>Get these articles every Friday.</h2>
+            <p class="mt-3">One email a week from Derek: the new Insights articles, where California rates actually are, and anything that changed in lending. No spam, unsubscribe in one click.</p>
           </div>
           <div>
-            <form action="https://dereks-newsletter-e3fbf6.beehiiv.com/subscribe" method="get" target="_blank" rel="noopener" class="newsletter-form">
-              <label class="visually-hidden" for="nl-email-ins">Email address</label>
-              <input type="email" id="nl-email-ins" name="email" placeholder="you@email.com" required autocomplete="email">
-              <button class="btn btn-accent" type="submit">Subscribe</button>
-            </form>
-            <p class="newsletter-fine">Subscribing opens our newsletter page to confirm. You'll receive one email a month from Emory Financial. We never sell your information. See our <a href="/privacy" style="color:#fff">Privacy Policy</a>.</p>
+            <div class="newsletter-embed">
+              <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="c9fa5ec4-9632-4a2c-8f61-4573df34482a"></script>
+              <noscript><a class="btn btn-accent" href="https://dereks-newsletter-e3fbf6.beehiiv.com/subscribe">Subscribe to The Rate Note</a></noscript>
+            </div>
+            <p class="newsletter-fine">One email a week, on Fridays, from Emory Financial. We never sell your information. See our <a href="/privacy" style="color:#fff">Privacy Policy</a>.</p>
           </div>
         </div>
       </div>
@@ -530,11 +529,11 @@ for f in out_dir.rglob("*.html"):
         marker = "  <!-- ============ NEWSLETTER ============ -->"
         assert marker in t, "homepage newsletter marker missing"
         t = t.replace(marker, latest + marker, 1)
-        old = ("A short, occasional email: where California rates actually are, what changed in lending "
+        old = ("A short email every Friday: where California rates actually are, what changed in lending "
                "guidelines, and a plain-English breakdown of one thing worth understanding.")
-        t = t.replace(old, "One email a month: the new Insights articles, where California rates "
+        t = t.replace(old, "One email every Friday: the new Insights articles, where California rates "
                            "actually are, and what changed in lending guidelines.")
-        t = t.replace("agree to receive occasional email", "agree to receive a monthly email")
+        t = t.replace("agree to receive occasional email", "agree to receive a weekly email")
     f.write_text(t, encoding="utf-8")
 
 (out_dir / "version.txt").write_text(f"Emory Financial — build {BUILD_ID}\n", encoding="utf-8")
